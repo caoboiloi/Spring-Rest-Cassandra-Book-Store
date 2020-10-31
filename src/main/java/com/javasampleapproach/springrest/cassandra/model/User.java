@@ -9,6 +9,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class User {
 	@PrimaryKey
 	private UUID id;
+	private String img;
 	private String username;
 	private String pass;
 	private int role;
@@ -18,7 +19,7 @@ public class User {
 	private String sex;
 	
 	public User(){}
-	public User(UUID id, String username, String pass, int role, String name, String address, String sex, int age) {
+	public User(UUID id, String username, String pass, int role, String name, String address, String sex, int age, String img) {
 		this.id = id;
 		this.username = username;
 		this.pass = pass;
@@ -27,6 +28,7 @@ public class User {
 		this.name = name;
 		this.sex = sex;
 		this.age = age;
+		this.img = img;
 	}
 	
 	public UUID getId() {
@@ -83,5 +85,12 @@ public class User {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public String getImg() {
+		return this.img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 }

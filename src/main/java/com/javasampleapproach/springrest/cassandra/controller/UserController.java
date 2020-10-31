@@ -48,7 +48,8 @@ public class UserController {
 							user.getName(),
 							user.getAddress(),
 							user.getSex(),
-							user.getAge()));
+							user.getAge(),
+							user.getImg()));
 		    return new ResponseEntity<>(_user, HttpStatus.CREATED);
 		} 
 		catch (Exception e) {
@@ -108,6 +109,7 @@ public class UserController {
 			_user.setAddress(user.getAddress());
 			_user.setSex(user.getSex());
 			_user.setAge(user.getAge());
+			_user.setImg(user.getImg());
 			return new ResponseEntity<>(repository.save(_user), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

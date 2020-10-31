@@ -14,15 +14,17 @@ public class Admin {
 	private String pass;
 	private int role;
 	private int access;
+	private String img;
 	
 	public Admin(){}
-	public Admin(UUID id, String name, String username, String pass, int role, int access) {
+	public Admin(UUID id, String name, String username, String pass, int role, int access, String img) {
 		this.id = id;
 		this.name = name;
 		this.username = username;
 		this.pass = pass;
 		this.role = role;
 		this.access = access;
+		this.img = img;
 	}
 	
 	public UUID getId() {
@@ -66,4 +68,12 @@ public class Admin {
 	public void setAccess(int access) {
 		this.access = access;
 	}
+	
+	public String getImg() {
+		return this.img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	
 }

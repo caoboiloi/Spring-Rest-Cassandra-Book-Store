@@ -47,7 +47,8 @@ public class AdminController {
 					data.getUsername(),
 					data.getPass(),
 					data.getRole(),
-					data.getAccess()
+					data.getAccess(),
+					data.getImg()
 					));
 		    return new ResponseEntity<>(_data, HttpStatus.CREATED);
 		} 
@@ -100,6 +101,7 @@ public class AdminController {
 			_data.setRole(data.getRole());
 			_data.setPass(data.getPass());
 			_data.setAccess(data.getAccess());
+			_data.setImg(data.getImg());
 			return new ResponseEntity<>(repository.save(_data), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
